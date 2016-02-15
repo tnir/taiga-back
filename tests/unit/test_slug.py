@@ -42,7 +42,7 @@ def test_project_slug_with_special_chars():
     project = Project.objects.create(name="漢字", description="漢字", owner=user)
     project.save()
 
-    assert project.slug == "test-han-zi"
+    assert project.slug == "han-zi"
 
 
 def test_project_with_existing_name_slug_with_special_chars():
@@ -50,4 +50,4 @@ def test_project_with_existing_name_slug_with_special_chars():
     Project.objects.create(name="漢字", description="漢字", owner=user)
     project = Project.objects.create(name="漢字", description="漢字", owner=user)
 
-    assert project.slug == "test-han-zi-1"
+    assert project.slug == "han-zi-1"

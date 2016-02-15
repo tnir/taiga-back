@@ -1206,7 +1206,7 @@ def test_dump_import_duplicated_project(client):
     assert response.status_code == 201
     response_data = response.data
     assert response_data["name"] == "Test import"
-    assert response_data["slug"] == "{}-test-import".format(user.username)
+    assert response_data["slug"] == "test-import"
 
 
 def test_dump_import_throttling(client, settings):
