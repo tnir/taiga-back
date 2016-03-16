@@ -342,6 +342,10 @@ class ProjectDetailSerializer(ProjectSerializer):
     roles = ProjectRoleSerializer(source="roles", many=True, read_only=True)
     members = serializers.SerializerMethodField(method_name="get_members")
 
+    max_memberships = serializers.SerializerMethodField(method_name="get_max_memberships")
+    total_memberships = serializers.SerializerMethodField(method_name="get_total_memberships")
+    can_is_private_be_updated = serializers.SerializerMethodField(method_name="get_can_is_private_be_updated")
+
     def get_members(self, obj):
         qs = obj.memberships.filter(user__isnull=False)
         qs = qs.extra(select={"complete_user_name":"concat(full_name, username)"})
@@ -349,6 +353,15 @@ class ProjectDetailSerializer(ProjectSerializer):
         qs = qs.select_related("role", "user")
         serializer = ProjectMemberSerializer(qs, many=True)
         return serializer.data
+
+    def get_max_memberships(self, obj):
+        return services.get_max_memberships_for_project(obj)
+
+    def get_total_memberships(self, obj):
+        return services.get_total_project_memberships(obj)
+
+    def get_can_is_private_be_updated(self, obj):
+        return services.check_if_project_privacity_can_be_changed(obj)
 
 
 class ProjectDetailAdminSerializer(ProjectDetailSerializer):
