@@ -5,7 +5,7 @@ Markdown==2.6.11
 Pillow==5.0.0
 PyJWT==1.5.3
 Unidecode==1.0.22
-amqp==2.1.4
+amqp==2.2.2
 asana==0.6.5
 bleach==2.0.0
 celery==4.0.2
