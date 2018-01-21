@@ -23,7 +23,7 @@ easy-thumbnails==2.5
 fn==0.4.3
 git+https://github.com/Xof/django-pglocks.git
 gunicorn==19.7.1
-jinja2==2.9.6
+jinja2==2.10
 lxml==3.8.0
 netaddr==0.7.19
 premailer==3.0.1
