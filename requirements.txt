@@ -6,7 +6,7 @@ Pillow==5.0.0
 PyJWT==1.5.3
 Unidecode==1.0.22
 amqp==2.2.2
-asana==0.6.5
+asana==0.6.7
 bleach==2.0.0
 celery==4.0.2
 cryptography==1.9
