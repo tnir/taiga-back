@@ -7,7 +7,7 @@ PyJWT==1.5.3
 Unidecode==1.0.22
 amqp==2.2.2
 asana==0.6.7
-bleach==2.0.0
+bleach==2.1.2
 celery==4.0.2
 cryptography==1.9
 cssutils==1.0.2
