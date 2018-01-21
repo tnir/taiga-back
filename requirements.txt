@@ -14,7 +14,7 @@ cssutils==1.0.2
 diff-match-patch==20121119
 django-ipware==2.0.1
 django-jinja==2.4.1
-django-picklefield==0.3.2
+django-picklefield==1.0.0
 django-sampledatahelper==0.4.1
 django-sites==0.9
 django-sr==0.0.4
