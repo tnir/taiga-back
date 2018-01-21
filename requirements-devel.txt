@@ -1,6 +1,6 @@
 -r requirements.txt
 
-coverage==4.4.1
+coverage==4.4.2
 coveralls==1.1
 django-slowdown==0.0.1
 factory_boy==2.8.1
