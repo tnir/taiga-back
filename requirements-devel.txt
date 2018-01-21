@@ -1,7 +1,7 @@
 -r requirements.txt
 
 coverage==4.4.2
-coveralls==1.1
+coveralls==1.2.0
 django-slowdown==0.0.1
 factory_boy==2.8.1
 py==1.4.34
